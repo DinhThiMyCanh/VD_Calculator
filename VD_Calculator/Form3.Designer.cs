@@ -29,6 +29,7 @@ namespace VD_Calculator
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtHoDem = new System.Windows.Forms.TextBox();
@@ -39,17 +40,18 @@ namespace VD_Calculator
             this.rdNu = new System.Windows.Forms.RadioButton();
             this.rdNam = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.chkTiengAnh = new System.Windows.Forms.CheckBox();
             this.chkTiengNhat = new System.Windows.Forms.CheckBox();
+            this.chkTiengAnh = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cboQuequan = new System.Windows.Forms.ComboBox();
             this.lstDSMH = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnChonAnh = new System.Windows.Forms.Button();
-            this.btnTTSV = new System.Windows.Forms.Button();
             this.btnLammoi = new System.Windows.Forms.Button();
+            this.btnTTSV = new System.Windows.Forms.Button();
+            this.btnChonAnh = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -149,16 +151,6 @@ namespace VD_Calculator
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ngoại ngữ";
             // 
-            // chkTiengAnh
-            // 
-            this.chkTiengAnh.AutoSize = true;
-            this.chkTiengAnh.Location = new System.Drawing.Point(175, 38);
-            this.chkTiengAnh.Name = "chkTiengAnh";
-            this.chkTiengAnh.Size = new System.Drawing.Size(171, 36);
-            this.chkTiengAnh.TabIndex = 0;
-            this.chkTiengAnh.Text = "Tiếng Anh";
-            this.chkTiengAnh.UseVisualStyleBackColor = true;
-            // 
             // chkTiengNhat
             // 
             this.chkTiengNhat.AutoSize = true;
@@ -168,6 +160,16 @@ namespace VD_Calculator
             this.chkTiengNhat.TabIndex = 8;
             this.chkTiengNhat.Text = "Tiếng Nhật";
             this.chkTiengNhat.UseVisualStyleBackColor = true;
+            // 
+            // chkTiengAnh
+            // 
+            this.chkTiengAnh.AutoSize = true;
+            this.chkTiengAnh.Location = new System.Drawing.Point(175, 38);
+            this.chkTiengAnh.Name = "chkTiengAnh";
+            this.chkTiengAnh.Size = new System.Drawing.Size(171, 36);
+            this.chkTiengAnh.TabIndex = 0;
+            this.chkTiengAnh.Text = "Tiếng Anh";
+            this.chkTiengAnh.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -231,15 +233,15 @@ namespace VD_Calculator
             this.panel1.Size = new System.Drawing.Size(266, 276);
             this.panel1.TabIndex = 13;
             // 
-            // btnChonAnh
+            // btnLammoi
             // 
-            this.btnChonAnh.Location = new System.Drawing.Point(40, 9);
-            this.btnChonAnh.Name = "btnChonAnh";
-            this.btnChonAnh.Size = new System.Drawing.Size(198, 61);
-            this.btnChonAnh.TabIndex = 0;
-            this.btnChonAnh.Text = "Chọn ảnh";
-            this.btnChonAnh.UseVisualStyleBackColor = true;
-            this.btnChonAnh.Click += new System.EventHandler(this.btnChonAnh_Click);
+            this.btnLammoi.Location = new System.Drawing.Point(40, 187);
+            this.btnLammoi.Name = "btnLammoi";
+            this.btnLammoi.Size = new System.Drawing.Size(198, 60);
+            this.btnLammoi.TabIndex = 2;
+            this.btnLammoi.Text = "Làm mới";
+            this.btnLammoi.UseVisualStyleBackColor = true;
+            this.btnLammoi.Click += new System.EventHandler(this.btnLammoi_Click);
             // 
             // btnTTSV
             // 
@@ -251,15 +253,16 @@ namespace VD_Calculator
             this.btnTTSV.UseVisualStyleBackColor = true;
             this.btnTTSV.Click += new System.EventHandler(this.btnTTSV_Click);
             // 
-            // btnLammoi
+            // btnChonAnh
             // 
-            this.btnLammoi.Location = new System.Drawing.Point(40, 187);
-            this.btnLammoi.Name = "btnLammoi";
-            this.btnLammoi.Size = new System.Drawing.Size(198, 60);
-            this.btnLammoi.TabIndex = 2;
-            this.btnLammoi.Text = "Làm mới";
-            this.btnLammoi.UseVisualStyleBackColor = true;
-            this.btnLammoi.Click += new System.EventHandler(this.btnLammoi_Click);
+            this.btnChonAnh.Location = new System.Drawing.Point(40, 9);
+            this.btnChonAnh.Name = "btnChonAnh";
+            this.btnChonAnh.Size = new System.Drawing.Size(198, 61);
+            this.btnChonAnh.TabIndex = 0;
+            this.btnChonAnh.Text = "Chọn ảnh";
+            this.toolTip1.SetToolTip(this.btnChonAnh, "Chọn ảnh 1MB");
+            this.btnChonAnh.UseVisualStyleBackColor = true;
+            this.btnChonAnh.Click += new System.EventHandler(this.btnChonAnh_Click);
             // 
             // frm_ThongTinSV
             // 
@@ -320,5 +323,6 @@ namespace VD_Calculator
         private System.Windows.Forms.Button btnLammoi;
         private System.Windows.Forms.Button btnTTSV;
         private System.Windows.Forms.Button btnChonAnh;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
